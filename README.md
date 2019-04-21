@@ -7,12 +7,13 @@ The project aims to build an interactive platform to provide geographical and st
 git clone https://github.com/XiaohuaCao/CattleGo_Final.git
 ```
 There are two parts of the code for the project:
-* `CattleGo_client`: UI for the project by using Angular 7
+* `CattleGo_client`: UI for the project by using Angular 7, Node.js, npm
 * `CattleGo_server`: API for the project by using Spring boot
 ## Run Project
 ### First Step - Start Server
 #####  Environment Setup
 * Download spring boot: https://spring.io/tools3/sts/all
+* Download nodejs boot: https://nodejs.org/en/download/
 * Open Spring Boot IDE: go to the downded folder above, doucle click the file: ..\sts-4.1.2.RELEASE\SpringToolSuite4
 * notes: Amazon RDS for MySQL was used in this project, no need to set localhost database
 
