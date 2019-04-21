@@ -1,0 +1,14 @@
+
+<bs-navbar></bs-navbar>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">{{pageTitle}}</h2>
+    <p class="lead">This is our data source for visualization
+    </p>
+  </div>
+</div>
+
+<div class='card-header'>
+ 
+  <ng2-smart-table [settings]="settings" [source]="characters"></ng2-smart-table>
+</div>

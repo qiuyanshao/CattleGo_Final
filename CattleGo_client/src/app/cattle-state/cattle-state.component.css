@@ -1,0 +1,6 @@
+div#data-chart {
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    border: 3px solid rgb(32, 113, 179);
+} 

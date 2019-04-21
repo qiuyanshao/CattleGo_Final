@@ -1,0 +1,42 @@
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">CattleGo Map</h2>
+    <p class="lead">We provide the accurate cattle data as well as related data in each U.S. state. 
+        The year range covers between 1988 to 2017.
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+<form #f="ngForm" >
+  <div class="form-group">
+      <label for="chooseData">Choose Data</label>
+      <select ngModel name="chooseData" id="chooseData" class="form-control" required>
+          <option > Cattle Production Data </option>
+          <option > Corn Production Data </option>
+          <option > Soybeans Production Data</option>
+          <option > Yearly Mean Max Temperature</option>
+          <option > Average Yearly Temperature</option>
+          <option > Yearly Extreme Max Temperature</option>
+          <option > Yearly Extreme Min Temperature</option>
+          <option > Total Annual Precipitation </option>
+          <option > Total Annual Snowfall </option>
+          <option > Annual Average Wind Speed</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label for="chooseYear">Choose Year</label>
+    <select ngModel name="chooseYear" id="chooseYear" class="form-control" required>
+      <option *ngFor="let year of years" [value]="year"> {{ year }}</option>
+    </select>
+</div>
+  <!-- <p>
+    {{ f.value | json}}
+  </p> -->
+  <button class="btn btn-primary"(click) = 'mapDraw(f.value)'>Draw Heat Map</button>
+  <button class="btn btn-primary" style = "position:relative; right:-100px;" (click) = 'resetMap(); f.resetForm()'>Reset Map </button>
+</form>
+<div chart id="us-map" style = "position:relative; top:20px;">
+  <h2>CattleGo Data on U.S. Map</h2>
+</div>

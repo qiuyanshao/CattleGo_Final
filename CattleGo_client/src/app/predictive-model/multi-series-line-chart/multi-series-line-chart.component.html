@@ -1,0 +1,18 @@
+
+<div id="slector" style = "position:relative;left:10px ; width: 38%">
+  <h1 style = "position:relative;left:150px;">{{ title }}</h1>
+  <form style = "position:relative;left:150px;top:50px;" #f="ngForm">
+    <div class="form-group">
+      <select multiple ngModel name="state" class="form-control" required>
+        <option *ngFor = "let state_name of states_list" [ngValue]="state_name">
+        {{ state_name }}
+      </select>
+      </div>
+      <button class="btn btn-primary" (click) = "apply(f.value)">Draw Chart </button>
+      <button class="btn btn-warning" (click) = "reset(); f.resetForm()">Reset Data</button>
+    </form>
+    <svg id = 'multi_svg' position="relative" width="250%" height="500"></svg>
+</div>
+
+
+

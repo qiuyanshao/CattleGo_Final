@@ -1,0 +1,122 @@
+
+<h2>Cattle Production Prediction Based On Linear Regression Model</h2>
+<br>
+<div align="left">
+    <span>Please Input Your Data Below</span>
+  </div>
+
+<form  #f="ngForm">
+    <div class="row">
+        <div class="col">
+            <label class="label">State</label>
+            <select ngModel name="state" class="form-control" required>
+                <option [ngValue]="0">Alabama (AL)</option>
+                <option [ngValue]="1">Arkansas (AR)</option>
+                <option [ngValue]="2">Delaware (DE)</option>
+                <option [ngValue]="3">Florida (FL)</option>
+                <option [ngValue]="4">Georgia (GA)</option>
+                <option [ngValue]="5">Iowa (IA)</option>
+                <option [ngValue]="6">Illinois (IL)</option>
+                <option [ngValue]="7">Indiana (IN)</option>
+                <option [ngValue]="8">Kansas (KS)</option>
+                <option [ngValue]="9">Kentucky (KY)</option>
+                <option [ngValue]="10">Louisiana (LA)</option>
+                <option [ngValue]="11">Maryland (MD)</option>
+                <option [ngValue]="12">Michigan (MI)</option>
+                <option [ngValue]="13">Minnesota (MN)</option>
+                <option [ngValue]="14">Missouri (MO)</option>
+                <option [ngValue]="15">Mississippi (MS)</option>
+                <option [ngValue]="16">North Carolina (NC)</option>
+                <option [ngValue]="17">North Dakota (ND)</option>
+                <option [ngValue]="18">Nebraska (NE)</option>
+                <option [ngValue]="19">New Jersey (NJ)</option>
+                <option [ngValue]="20">New York (NY)</option>
+                <option [ngValue]="21">Ohio (OH)</option>
+                <option [ngValue]="22">Oklahoma (OK)</option>
+                <option [ngValue]="23">Pennsylvania (PA)</option>
+                <option [ngValue]="24">South Carolina (SC)</option>
+                <option [ngValue]="25">South Dakota (SD)</option>
+                <option [ngValue]="26">Tennessee (TN)</option>
+                <option [ngValue]="27">Texas (TX)</option>
+                <option [ngValue]="28">Virginia (VA)</option>
+                <option [ngValue]="29">Wisconsin (WI)</option>
+                <option [ngValue]="30">West Virginia (WV)</option>
+              </select>
+        </div>
+      <div class="col">
+          <label class="label" >Average Yearly Temperature</label>
+        <input type="text" ngModel name = 'tavg' class="form-control" required>
+      </div>
+      <div class="col">
+        <label class="label" >Extreme Max Temp for the Year</label>
+        <input type="text" ngModel name= 'emxt' class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label class="label" >Extreme Min Temp for the Year</label>
+        <input type="text" ngModel name = 'emnt' class="form-control" required>
+           
+        </div>
+      <div class="col">
+          <label class="label" >No of Days With Max Temp >=32.2 ℃/90 ºF</label>
+        <input type="text" ngModel name = 'dx90' class="form-control" required>
+      </div>
+      <div class="col">
+        <label class="label" >No of Days With Min Temp <= 0℃/32 ºF</label>
+        <input type="text" ngModel name = 'dt32' class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label class="label" >Total Annual Precipitation</label>
+        <input type="text" ngModel name = 'prcp' class="form-control" required>
+           
+        </div>
+      <div class="col">
+          <label class="label" >Total annual snowfall in millimeters</label>
+        <input type="text" ngModel name = 'snow' class="form-control" required>
+      </div>
+      <div class="col">
+        <label class="label" >Annual Average Wind Speed</label>
+        <input type="text" ngModel name = 'awnd' class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label class="label" >Corn Production in Tons</label>
+        <input type="text" ngModel name = 'corn' class="form-control" required>
+           
+        </div>
+      <div class="col">
+          <label class="label" >Soybeans Production in Bu</label>
+        <input type="text" ngModel name = 'soybean' class="form-control" required>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <br><br>
+    <div class="row" align="left">
+      <div class="col">
+          <button class="btn btn-warning" (click) = "clear();f.resetForm()">Reset Inputs</button>
+          <button class="btn btn-success" (click) = "apply(f.value); f.resetForm()">Predict Cattle Production</button>
+      </div>
+
+      
+        
+    </div>
+  </form>
+
+  <hr>
+     <div class="col">
+      <h5 class="label" align = "left">Predicted Cattle Production (million pounds) Based On Provided Data: </h5>
+      <input class = "result" type="text" [(ngModel)]="result">
+    </div>
+
+  
+
+
+

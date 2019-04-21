@@ -1,0 +1,35 @@
+.label {
+    text-align: left;
+    display: block;
+    font-weight: bold;
+}
+
+
+.label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+.input-form {
+    margin-top: 40px;
+}
+
+
+.vertical-line{
+    width: 50%;
+    margin: auto;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    transform: rotate(90deg);
+    border-color: purple;
+}
+
+.result {
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    color: green;
+    border: bold;
+    width: 400px;
+
+}

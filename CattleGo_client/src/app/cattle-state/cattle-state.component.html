@@ -1,0 +1,58 @@
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading"> CattleGo Comparison</h2>
+    <p class="lead">We provide different visualizations for the comparison of various CattelGo features with
+      multiple states in history. 
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+<div class = "row">
+  <br><br>
+    <form #f="ngForm" >
+        <div class="form-group">
+            <label for="chooseData">Step1 - Choose Data</label>
+            <select ngModel name="chooseData" id="chooseData" class="form-control">
+                <option > Cattle Production Data </option>
+                <option > Corn Production Data </option>
+                <option > Soybeans Production Data</option>
+                <option > Yearly Mean Max Temperature</option>
+                <option > Average Yearly Temperature</option>
+                <option > Yearly Extreme Max Temperature</option>
+                <option > Yearly Extreme Min Temperature</option>
+                <option > Total Annual Precipitation </option>
+                <option > Total Annual Snowfall </option>
+                <option > Annual Average Wind Speed</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="chooseType">Step2 - Choose Visualization Type</label>
+            <select ngModel name="chooseType" id="chooseType" class="form-control">
+                <option > Bar Chart </option>
+                <option > Line Chart </option>
+            </select>
+        </div>
+      
+       
+        <!-- <p>
+          {{ f.value | json}}
+        </p> -->
+        <hr>
+        <br><br> <br> <br> <br>
+        <button class="btn btn-primary" (click) = "chartDraw(f.value)">Draw Comparison Chart </button>
+        <button class="btn btn-warning" (click) = "reset(); f.resetForm()">Reset Data</button>
+      </form>
+      <div  chart id="us-map" style = "top:10px;width: 20%; height: 20%">
+          <label for="chooseType">Step3 - Choose State(s)</label>
+      </div>
+
+</div>
+
+
+
+  
+<div chart id="data-chart" style = "position:relative; top:40px;">
+    <h2> CattleGo Comparison Chart</h2>
+  
+</div>

@@ -1,0 +1,17 @@
+mat-drawer-content {
+    padding: 20px;
+}
+
+#all_content { 
+    position: absolute; 
+    left: 50px;
+    width: 90%; 
+    height: 100%; 
+    text-align: center; 
+  } 
+
+  #sideBar { 
+    position: relative; 
+    top: 200px;
+    width: 20%; 
+  } 

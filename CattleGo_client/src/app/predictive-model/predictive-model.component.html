@@ -1,0 +1,13 @@
+<!-- <div chart id="us-map" style = "position:relative; left:-150px"></div> -->
+  
+<mat-drawer-container id="all_content" >
+    <mat-drawer id="sideBar" mode="side" opened="true">
+        <mat-menu ></mat-menu>
+        <!-- <a mat-menu-item *ngFor="let item of examples" [routerLink]="[item.route]" [queryParams]= "[item.params]"  routerLinkActive="active">{{ item.title }}</a> -->
+        <a mat-menu-item *ngFor="let item of examples" [routerLink]="[item.route]"  routerLinkActive="active">{{ item.title }}</a>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+

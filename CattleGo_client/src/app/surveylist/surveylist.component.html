@@ -1,0 +1,45 @@
+
+<br><br>
+<div class="container">
+    <div class='card-header'>
+         {{pageTitle}}
+    </div>
+     <div class='card-body'>
+            
+     <div class='table-responsive'>
+     <table class="table table-hover" *ngIf='surveys && surveys.length'>
+         <thead>
+       <tr>
+           <th>Rate?</th>
+           <th>Big Problem?</th>
+           <th>Helpful?</th>
+           <th>Industry?</th>
+           <th>Like Most?</th>
+           <th>Like Least?</th>
+          
+  
+       </tr>
+     </thead>
+       <tr *ngFor="let ds of surveys">
+           <td>{{ds.rate}}</td>
+           <td>{{ds.bigProblem}}</td>
+           <td>{{ds.helpful}}</td>
+           <td>{{ds.industry}}</td>
+           <td>{{ds.likeMost}}</td>
+           <td>{{ds.likeLeast}}</td>
+           
+          
+       
+       </tr>
+     </table>
+ </div>
+
+     <button class="btn btn-outline-secondary" (click) = "onBack()">Back</button> 
+
+    
+
+   </div>
+
+
+ 
+   

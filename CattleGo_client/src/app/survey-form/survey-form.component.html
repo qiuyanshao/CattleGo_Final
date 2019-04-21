@@ -1,0 +1,111 @@
+
+<div class="survey_container">
+        <img  src="./../../assets/header.png" alt="Generic placeholder image" width="1200" height="140">
+    <form  #f="ngForm">
+      <div class="form-group">
+              <label for="rate">1. How would you rate CattleGo Platform?</label>
+              <div class="col-sm-10">
+                    <form>
+                          <div class="rating">
+                              <input id="star5" name="star" type="radio" value="5" [(ngModel)] ="survey.rate" class="radio-btn hide" />
+                              <label for="star5" >☆</label>
+                              <input id="star4" name="star" type="radio" value="4" [(ngModel)] ="survey.rate" class="radio-btn hide" />
+                              <label for="star4" >☆</label>
+                              <input id="star3" name="star" type="radio" value="3" [(ngModel)] ="survey.rate" class="radio-btn hide" />
+                              <label for="star3" >☆</label>
+                              <input id="star2" name="star" type="radio" value="2" [(ngModel)] ="survey.rate" class="radio-btn hide" />
+                              <label for="star2" >☆</label>
+                              <input id="star1" name="star" type="radio" value="1" [(ngModel)] ="survey.rate" class="radio-btn hide" />
+                              <label for="star1" >☆</label>
+                              <div class="clear"></div>
+                          </div>
+                      </form>
+                    </div>
+          </div>
+          <div class="form-group">
+              <label for="sourcename">2. Which of the issues below was the biggest problem during your reperience with the app?</label>
+              <div class="col-sm-10">
+                  <select class="drop" name="bigproblem" id = "bigproblem" [(ngModel)] ="survey.bigProblem" required="true">
+                  <option >The app was visually unappealing</option>
+                  <option >The app was missing features I needed</option>
+                  <option >The app was confusing to use</option>
+                  <option >The app crashed</option>
+                  <option >I experienced bugs</option>
+                  <option >Other</option></select>
+                    <!--  <input type="text" th:field="*{predicateClause}" class="form-control" id="projectdesc" placeholder="Enter predicate clause"> -->
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="sourcename">3. What do you like most about the app?</label>
+              <div class="col-sm-10">
+                  <select class="drop" name="likemost" id = "likemost" [(ngModel)] ="survey.likeMost" required="true">
+                  <option >Stability</option>
+                  <option >Functionality</option>
+                  <option >Look and feel</option>
+                  <option >Speed</option>
+                  <option >Navigation</option>
+                  <option >Content</option>
+                  <option >Other</option></select>
+                    <!--  <input type="text" th:field="*{predicateClause}" class="form-control" id="projectdesc" placeholder="Enter predicate clause"> -->
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="sourcename">4. What do you like least about the app?</label>
+              <div class="col-sm-10">
+                  <select class="drop" name="likemost" id = "likemost" [(ngModel)] ="survey.likeLeast" required="true">
+                  <option >Stability</option>
+                  <option >Functionality</option>
+                  <option >Look and feel</option>
+                  <option >Speed</option>
+                  <option >Navigation</option>
+                  <option >Content</option>
+                  <option >Other</option></select>
+                    <!--  <input type="text" th:field="*{predicateClause}" class="form-control" id="projectdesc" placeholder="Enter predicate clause"> -->
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="sourcename">5. Did/do you work in cattle related industry?</label>
+              <div class="col-sm-10">
+                  <select class="drop" name="industry" id = "industry" [(ngModel)] ="survey.industry" required="true">
+                  <option >Cattle Farmer</option>
+                  <option >Restaurant Owner</option>
+                  <option >Market Observer</option>
+                  <option >Other</option></select>
+                    <!--  <input type="text" th:field="*{predicateClause}" class="form-control" id="projectdesc" placeholder="Enter predicate clause"> -->
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="sourcename">6. Do you find our app helpful, rate the degree of satisfaction?</label>
+              <div class="col-sm-10">
+                  <select class="drop" name="industry" id = "industry" [(ngModel)] ="survey.helpful" required="true">
+                  <option  >Strongly Agree</option>
+                  <option >Somewhat agree</option>
+                  <option >Neither agree nor disagree</option>
+                  <option >Somewhat disagree</option>
+                  <option >Strongly disagree</option></select>
+                    <!--  <input type="text" th:field="*{predicateClause}" class="form-control" id="projectdesc" placeholder="Enter predicate clause"> -->
+              </div>
+          </div>
+
+
+
+        
+
+
+        
+
+          
+          <div class="row" align="left">
+                <div class="col">
+                    <button class="btn btn-warning" (click) = "f.resetForm()">Reset</button>
+                    <button class="btn btn-success" (click) = "processForm(); f.resetForm()">Done</button>
+                </div>
+          
+                
+                  
+              </div>
+      </form>
+
+
+</div>
