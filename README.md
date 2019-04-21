@@ -39,7 +39,7 @@ ng serve --open
 * Go to `http://localhost:4200/`
 * 
 ### Excution
-Once CattleGo starts, the user will be able to see three options:
+Once CattleGo starts, the user will be able to navigate to the following modules:
 * CattleGo Data
 Users can choose the data category and year. After selection, an US-map based heatmap will be generated. Users can hover the mouse to see the details of a specific state. 
 * CattleGO Comparison
