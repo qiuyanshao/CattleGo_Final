@@ -27,6 +27,7 @@ npm install -g @angular/cli
 ```
 
 #####   Run Client
+* Download Node: https://nodejs.org/en/
 * Go to project `CattleGo_client` root
 * Install packages
  ```bash
