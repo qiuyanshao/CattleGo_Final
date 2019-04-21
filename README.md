@@ -28,6 +28,7 @@ npm install -g @angular/cli
 ```
 
 #####   Run Client
+* Download Node: https://nodejs.org/en/
 * Go to project `CattleGo_client` root
 * Install packages
  ```bash
@@ -38,18 +39,17 @@ npm install
 ng serve --open
 ```
 * Go to `http://localhost:4200/`
-* 
 ### Excution
 Once CattleGo starts, the user will be able to navigate to the following modules:
-* CattleGo Data
+* CattleGo Data:
 Users can choose the data category and year. After selection, an US-map based heatmap will be generated. Users can hover the mouse to see the details of a specific state. 
-* CattleGO Comparison
+* CattleGO Comparison:
 Users can choose between stack bars and line chart for data presentation. Data from different states can be viewed at the same time for a better comparison. Users can hover the mouse to see the details of a specific state. 
-* Predictive Model
+* Predictive Model:
 Both time series and regression models have been implemented to predict the production of cattle. Users can enter inputs for specific selected state to customize the prediction by using the linear regression model, the predicted cattle production result will be given. 
-* Survey
+* Survey:
 Users can give reviews and feedback about CattleGo Platform, the survey summaries can be viewed by users
-* Data Source Table
+* Data Source Table:
 Users can also navigate to the Data Source Table to review the raw data which was used for visusalization and machine learning.
 
 
