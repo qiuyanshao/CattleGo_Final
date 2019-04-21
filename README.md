@@ -37,7 +37,6 @@ npm install
 ng serve --open
 ```
 * Go to `http://localhost:4200/`
-* 
 ### Excution
 Once CattleGo starts, the user will be able to navigate to the following modules:
 * CattleGo Data:
