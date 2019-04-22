@@ -9,18 +9,28 @@ git clone https://github.com/XiaohuaCao/CattleGo_Final.git
 There are three parts of the code for the project:
 * `CattleGo_client`: UI for the project by using Angular 7, Node.js, npm
 * `CattleGo_server`: API for the project by using Spring boot
-* `CattleGo_DataAnalysis`: Contains all the data handling & data process code (see README in the CattleGo_server folder)
+* `CattleGo_DataAnalysis`: Contains all the data handling & data process code (see README in the CattleGo_server folder for more details)
 ## Run Project
 ### First Step - Start Server
 #####  Environment Setup
 * Download spring boot: https://spring.io/tools3/sts/all
 * Download nodejs boot: https://nodejs.org/en/download/
+* Download Java JDK: https://www.oracle.com/technetwork/java/javase/downloads/index.html
 * Open Spring Boot IDE: go to the downded folder above, doucle click the file: ..\sts-4.1.2.RELEASE\SpringToolSuite4
+
+
 * notes: Amazon RDS for MySQL was used in this project, no need to set localhost database
 
 #####  Run Server
+* unzip the file "CattleGo_server.zip"
 * Import `CattleGo_server`: File import -> Maven -> Existing Maven Projects...
+* right cilck the project name ->run as -> `Maven clean`
+* right cilck the project name ->run as -> `Maven install`
 * Run server: right cilck the project name -> run as `spring boot app`
+* if you have an error message during the process "No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?", you will need to change the IDE perferences of STS following the instructions below:
+* goto Windows-->preferences-->installed jres
+* remove the exising JRE
+* add the JDK path (for Windows user, you may find it here: C:\Program Files\Java\jdk1.8.0_181)
 ### Second Step - Start Client
 ##### Environment Setup
 * Install the Angular CLI: 
