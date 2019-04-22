@@ -9,7 +9,7 @@ git clone https://github.com/XiaohuaCao/CattleGo_Final.git
 There are three parts of the code for the project:
 * `CattleGo_client`: UI for the project by using Angular 7, Node.js, npm
 * `CattleGo_server`: API for the project by using Spring boot
-* `CattleGo_DataAnalysis`: Contains all the data handling & data process code (see README in the CattleGo_server folder for more details)
+* `CattleGo_DataAnalysis`: Contains all the data process code (see README in the CattleGo_server folder for more details)
 ## Run Project
 ### First Step - Start Server
 #####  Environment Setup
